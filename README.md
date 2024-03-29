@@ -36,3 +36,7 @@ To get started with this project, follow these steps:
 
 The list of supported currencies is fetched dynamically from the Open Exchange Rates API. Country flags associated with each currency are displayed using the FlagsAPI.
 
+## Inspiration
+
+While on vacation in Saudi Arabia, I found it annoying that I had to constantly open up a browser tab to convert currencies. There were also no ad-free apps that could help me easily convert currencies, so I decided to tackle this problem on my own and create a currency converter for future trips.
+
