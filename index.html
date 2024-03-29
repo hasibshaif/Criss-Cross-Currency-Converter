@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Currency Converter</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div class="navbar">
+         <img src="./images/CRI$$ CRO$$-logo-black.png" alt="CRI$$ CRO$$" id="nav-img">
+      </div>
+      <div class="intro-sect">
+         <h1>CRI$$ CRO$$</h1>
+         <p class="intro-p">Welcome to CRI$$ CRO$$, your destination for simple, hassle-free currency conversions. Easily compare real-time exchange rates, convert currencies, explore popular conversions, and see a full list of all currencies and their respective countries and currency codes.</p>
+      </div>
+      <hr>
+      <div class="upper-container">
+         <div class="main-converter-container">
+            <h2 class="upper-section-header">Convert</h2>
+            <div class="from-container">
+               <input class="input-box" type="number" placeholder="Amount">
+               <select id="fromCurrency">
+                  <option class="default-dropdown" value="" selected disabled>From</option>
+                  <!--Data will be populated dynamically-->
+               </select>
+            </div>
+            <button type="button" id="swap">⇄</button>
+            <div class="to-container">
+               <input class="output-box" readonly="readonly">
+               <select id="toCurrency">
+                  <option class="default-dropdown" value="" selected disabled><i>To</i></option>
+                  <!--Data will be populated dynamically-->
+               </select>
+            </div>
+            <div class="exchange-rate-text"></div>
+         </div>
+         <div class="popular-conversions-container">
+            <h2 class="upper-section-header">Popular Conversions</h2>
+            <table class="popular-conversion-table">
+               <tr>
+                  <td><button class="pop-btn" id="usdCadBtn">USD/CAD</button></td>
+                  <td><button class="pop-btn" id="usdGbpBtn">USD/GBP</button></td>
+               </tr>
+               <tr>
+                  <td><button class="pop-btn" id="usdJpyBtn">USD/JPY</button></td>
+                  <td><button class="pop-btn" id="usdEurBtn">USD/EUR</button></td>
+               </tr>
+               <tr>
+                  <td><button class="pop-btn" id="eurJpyBtn">EUR/JPY</button></td>
+                  <td><button class="pop-btn" id="eurChfBtn">EUR/CHF</button></td>
+               </tr>
+               <tr>
+                  <td><button class="pop-btn" id="eurGbpBtn">EUR/GBP</button></td>
+                  <td><button class="pop-btn" id="audUsdBtn">AUD/USD</button></td>
+               </tr>
+               <tr>
+                  <td><button class="pop-btn" id="gbpJpyBtn">GBP/JPY</button></td>
+                  <td><button class="pop-btn" id="chfJpyBtn">CHF/JPY</button></td>
+               </tr>
+               <tr>
+                  <td><button class="pop-btn" id="eurCadBtn">EUR/CAD</button></td>
+                  <td><button class="pop-btn" id="eurAudBtn">EUR/AUD</button></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <hr>
+      <div class="supported-currencies-container">
+         <h2 class="lower-section-header">Supported Currencies</h2>
+         <table class="supported-currencies-table">
+            <thead>
+               <tr>
+                  <th>Flag</th>
+                  <th>Currency Code</th>
+                  <th>Currency Name</th>
+                  <th>Country Name</th>
+               </tr>
+            </thead>
+            <tbody id="currencyListBody">
+               <!-- Currency data will be populated dynamically -->
+            </tbody>
+         </table>
+      </div>
+      <script type="module" src="script.js"></script>
+   </body>

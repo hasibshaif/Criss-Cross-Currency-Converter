@@ -1,0 +1,180 @@
+html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('./images/background-image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: Effra, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #ffffffc7;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#nav-img {
+    max-width: auto;
+    max-height: 100%;
+    padding-left: 46%;
+}
+
+.intro-sect {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.upper-container {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    gap: 50px;  
+}
+
+.upper-section-header {
+    text-align: left;
+    padding: auto;
+}
+
+.main-converter-container {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #b9dfa6;
+    background-image: white;
+    background-image: linear-gradient(to bottom left, white, #b9dfa6);
+    padding: 20px;
+    box-shadow: 3px 3px 10px 10px #00000026
+}
+
+.input-box {
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+    background-color: #b9dfa658;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+#fromCurrency {
+    width: 300px;
+    height: 53px;
+    font-size: medium;
+    border-radius: 20px;
+}
+
+.from-container {
+    margin-bottom: 40px;
+}
+
+.default-dropdown {
+    font-style: italic;
+}
+
+#swap {
+    position: absolute;
+    top: 45%;
+    left: 67%;
+    font-size: 25px;
+    background-image: linear-gradient(to bottom left, white, #b9dfa6);
+    border-radius: 15px;
+}
+
+#swap:hover {
+    filter: brightness(150%);
+}
+
+#swap:active {
+    filter: brightness(90%);
+}
+
+.output-box {
+    width: 200px;
+    height: 50px;
+    font-size: medium;
+    background-color: #b9dfa658;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#toCurrency {
+    width: 300px;
+    height: 53px;
+    font-size: medium;
+    border-radius: 20px;
+}
+
+.to-container {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#exchange-rate-text {
+    display: none;
+}
+
+.popular-conversions-container {
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 30px;
+    border-color: #b9dfa6;
+    background-image: white;
+    background-image: linear-gradient(to bottom left, white, #b9dfa6);
+    padding: 20px;
+    box-shadow: 3px 3px 10px 10px #00000026
+}
+
+.popular-conversion-table {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.pop-btn {
+    font-size: 20px;
+    background-image: linear-gradient(to bottom left, white, #b9dfa6);
+    border-radius: 10px;
+}
+
+hr {
+    border-top: 3px dotted black;
+    width: 100%;
+}
+
+.lower-section-header {
+    text-align: center;
+}
+
+.supported-currencies-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.supported-currencies-table {
+    margin-right: auto;
+    margin-left: auto;
+}
