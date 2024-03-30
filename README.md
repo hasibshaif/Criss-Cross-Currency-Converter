@@ -38,5 +38,5 @@ The list of supported currencies is fetched dynamically from the Open Exchange R
 
 ## Inspiration
 
-While on vacation in Saudi Arabia, I found it annoying that I had to constantly open up a browser tab to convert currencies. There were also no ad-free apps that could help me easily convert currencies, so I decided to tackle this problem on my own and create a currency converter for future trips.
+While on vacation abroad, I found it annoying that I had to constantly open up a browser tab to convert currencies. There were also no ad-free apps that could help me easily convert currencies, so I decided to tackle this problem on my own and create a currency converter for future trips.
 
