@@ -1,9 +1,6 @@
-// Global variable for the API key
-import apiKey from './config.js';
-
 // Function to fetch currency data from the API
 function fetchCurrencies() {
-    fetch('https://openexchangerates.org/api/currencies.json')
+    fetch('/api/fetchCurrencies') // Call the serverless function
         .then(response => response.json())
         .then(data => {
             // Populate 'fromCurrency' dropdown
@@ -57,26 +54,19 @@ function convertCurrency() {
     var fromCurrency = document.getElementById("fromCurrency").value;
     var toCurrency = document.getElementById("toCurrency").value;
 
-    // Check if the amount is a valid number
     if (!isNaN(amount)) {
-        // Make the API request to fetch the latest exchange rates
-        var apiUrl = 'https://openexchangerates.org/api/latest.json';
-
-        fetch(apiUrl + '?app_id=' + apiKey)
+        // Call the serverless function instead of the Open Exchange Rates API
+        fetch('/api/fetchLatestRates')
             .then(response => response.json())
             .then(data => {
-                // Check if the API response contains the expected data
                 if ('rates' in data) {
-                    // Extract exchange rates from the response
                     const rates = data.rates;
 
-                    // Perform currency conversion calculation
                     if (fromCurrency in rates && toCurrency in rates) {
                         const exchangeRate = rates[toCurrency] / rates[fromCurrency];
                         const convertedAmount = amount * exchangeRate;
 
-                        // Update the output box with the converted amount
-                        document.querySelector('.output-box').value = convertedAmount.toFixed(2); // Limit to 2 decimal places
+                        document.querySelector('.output-box').value = convertedAmount.toFixed(2);
                     } else {
                         console.error('Invalid currency code');
                     }
@@ -86,8 +76,7 @@ function convertCurrency() {
             })
             .catch(error => console.error('Error:', error));
     } else {
-        // If no valid amount is entered, leave the output box empty or display a default message
-        document.querySelector('.output-box').value = ''; // Empty output box
+        document.querySelector('.output-box').value = '';
     }
 }
 
@@ -126,15 +115,11 @@ function displayExchangeRate() {
     var fromCurrency = document.getElementById("fromCurrency").value;
     var toCurrency = document.getElementById("toCurrency").value;
 
-    // Check if both currencies are selected
     if (fromCurrency && toCurrency) {
-        // Make the API request to fetch the exchange rate
-        var apiUrl = `https://openexchangerates.org/api/latest.json?app_id=${apiKey}`;
-
-        fetch(apiUrl)
+        // Call the serverless function instead of the Open Exchange Rates API
+        fetch('/api/fetchLatestRates')
             .then(response => response.json())
             .then(data => {
-                // Check if the API response contains the exchange rates
                 if ('rates' in data) {
                     const exchangeRate = data.rates[toCurrency] / data.rates[fromCurrency];
                     const exchangeRateText = `1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency}`;
@@ -148,10 +133,10 @@ function displayExchangeRate() {
             })
             .catch(error => console.error('Error:', error));
     } else {
-        // Hide the exchange rate text if currencies are not selected
         document.querySelector('.exchange-rate-text').style.display = 'none';
     }
 }
+
 
 // Event listener for the currency dropdowns
 document.getElementById("fromCurrency").addEventListener("change", displayExchangeRate);
